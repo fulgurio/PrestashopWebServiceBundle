@@ -14,7 +14,7 @@ class PrestashopWebService{
 
     public function getInstance(){
         if(is_null($this->instance)){
-            $this->instance =  new \KkuetNet\PrestashopWebServiceBundle\Vendor\PrestaShopWebservice(
+            $this->instance =  new \PrestaShopWebservice(
                 $this->container->getParameter('kkuet_net_prestashop_web_service.website'),
                 $this->container->getParameter('kkuet_net_prestashop_web_service.key'),
                 $this->container->getParameter('kkuet_net_prestashop_web_service.debug')
@@ -25,7 +25,7 @@ class PrestashopWebService{
 
     public function personalInstance($websiteurl, $websitekey, $debug) {
         if(is_null($this->instance)){
-            $this->instance =  new \KkuetNet\PrestashopWebServiceBundle\Vendor\PrestaShopWebservice(
+            $this->instance =  new \PrestaShopWebservice(
                 $websiteurl,
                 $websitekey,
                 $debug

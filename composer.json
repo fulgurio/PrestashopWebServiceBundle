@@ -8,14 +8,22 @@
         {
             "name": "Anthony GROSS",
             "email": "anthony_gross@kkuet.net"
+        },
+        {
+            "name": "Vincent GUERARD",
+            "email": "v.guerard@fulgurio.net"
         }
     ],
     "require": {
         "symfony/framework-bundle": "2.*",
-        "twig/twig": "1.*"
+        "twig/twig": "1.*",
+        "prestashop/prestashop-webservice-lib": "dev-master"
     },
     "autoload": {
-        "psr-0": { "KkuetNet\\PrestashopWebServiceBundle": "" }
+        "psr-0": { "KkuetNet\\PrestashopWebServiceBundle": "" },
+        "files": [
+            "vendor/prestashop/prestashop-webservice-lib/PSWebServiceLibrary.php"
+        ]
     },
     "target-dir": "KkuetNet/PrestashopWebServiceBundle",
     "repositories": [
