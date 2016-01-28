@@ -1,19 +1,21 @@
 <?php
 namespace KkuetNet\PrestashopWebServiceBundle\Services;
 
-
-class PrestashopWebService{
+class PrestashopWebService
+{
     private $container  = null;
     private $em         = null;
     private $instance   = null;
 
-    public function __construct($container){
+    public function __construct($container)
+    {
         $this->container = $container;
-        $this->em        = $container->get('doctrine')->getManager();
     }
 
-    public function getInstance(){
-        if(is_null($this->instance)){
+    public function getInstance()
+    {
+        if (is_null($this->instance))
+        {
             $this->instance =  new \PrestaShopWebservice(
                 $this->container->getParameter('kkuet_net_prestashop_web_service.website'),
                 $this->container->getParameter('kkuet_net_prestashop_web_service.key'),
@@ -23,8 +25,10 @@ class PrestashopWebService{
         return $this->instance;
     }
 
-    public function personalInstance($websiteurl, $websitekey, $debug) {
-        if(is_null($this->instance)){
+    public function personalInstance($websiteurl, $websitekey, $debug)
+    {
+        if (is_null($this->instance))
+        {
             $this->instance =  new \PrestaShopWebservice(
                 $websiteurl,
                 $websitekey,
@@ -34,5 +38,3 @@ class PrestashopWebService{
         return $this->instance;
     }
 }
-
-?>
