@@ -1,4 +1,7 @@
 services:
   prestashop_webservice:
     class: KkuetNet\PrestashopWebServiceBundle\Services\PrestashopWebService
-    arguments: [@service_container]
+    arguments:
+        - %kkuet_net_prestashop_web_service.website%
+        - %kkuet_net_prestashop_web_service.key%
+        - %kkuet_net_prestashop_web_service.debug%

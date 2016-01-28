@@ -3,13 +3,29 @@ namespace KkuetNet\PrestashopWebServiceBundle\Services;
 
 class PrestashopWebService
 {
-    private $container  = null;
-    private $em         = null;
     private $instance   = null;
 
-    public function __construct($container)
+    /**
+     * Default loaded parameters
+     *
+     * @var array
+     */
+    private $parameters;
+
+    /**
+     * Constructor
+     *
+     * @param string $website
+     * @param string $key
+     * @param boolean $debug
+     */
+    public function __construct($website, $key, $debug)
     {
-        $this->container = $container;
+        $this->parameters = array(
+            'website' => $website,
+            'key'     => $key,
+            'debug'   => $debug
+        );
     }
 
     public function getInstance()
@@ -17,9 +33,9 @@ class PrestashopWebService
         if (is_null($this->instance))
         {
             $this->instance =  new \PrestaShopWebservice(
-                $this->container->getParameter('kkuet_net_prestashop_web_service.website'),
-                $this->container->getParameter('kkuet_net_prestashop_web_service.key'),
-                $this->container->getParameter('kkuet_net_prestashop_web_service.debug')
+                $this->parameters['website'],
+                $this->parameters['key'],
+                $this->parameters['debug']
             );
         }
         return $this->instance;
