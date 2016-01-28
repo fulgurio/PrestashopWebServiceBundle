@@ -20,10 +20,7 @@
         "prestashop/prestashop-webservice-lib": "dev-master"
     },
     "autoload": {
-        "psr-0": { "KkuetNet\\PrestashopWebServiceBundle": "" },
-        "files": [
-            "vendor/prestashop/prestashop-webservice-lib/PSWebServiceLibrary.php"
-        ]
+        "psr-0": { "KkuetNet\\PrestashopWebServiceBundle": "" }
     },
     "target-dir": "KkuetNet/PrestashopWebServiceBundle",
     "repositories": [
@@ -33,5 +30,3 @@
         }
     ]
 }
-
-

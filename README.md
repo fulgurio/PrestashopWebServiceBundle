@@ -1,4 +1,4 @@
-Getting Started
+Getitng Started
 ==================================
 
 This bundle allow you to integrate easily Prestashop API into your symfony project.
@@ -26,6 +26,23 @@ Add KkuetNetPrestashopWebServiceBundle in your composer.json:
         "kkuetnet/prestashopwebservice-bundle": "dev-master"
     }
 }
+```
+
+The bundle uses the [Prestashop webservice lib](https://github.com/PrestaShop/PrestaShop-webservice-lib). We need to set the autoload of composer to use this library,
+which is not PSR compatible.
+
+Update your composer autoload :
+```js
+    "autoload": {
+        "files": [
+            "vendor/prestashop/prestashop-webservice-lib/PSWebServiceLibrary.php"
+        ]
+    }
+```
+
+then call composer to update his autoload
+```bash
+composer dump-autoload
 ```
 
 Composer will install the bundle to your project's `vendor/kkuetnet` directory.
