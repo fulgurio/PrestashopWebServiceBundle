@@ -1,4 +1,4 @@
-Getitng Started
+Getting Started
 ==================================
 
 This bundle allow you to integrate easily Prestashop API into your symfony project.
