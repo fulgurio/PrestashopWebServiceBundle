@@ -22,7 +22,7 @@
     "autoload": {
         "psr-0": { "KkuetNet\\PrestashopWebServiceBundle": "" },
         "files": [
-            "vendor/prestashop/prestashop-webservice-lib/PSWebServiceLibrary.php"
+            "/vendor/prestashop/prestashop-webservice-lib/PSWebServiceLibrary.php"
         ]
     },
     "target-dir": "KkuetNet/PrestashopWebServiceBundle",
